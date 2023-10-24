@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Display Name</title>
+  <script>
+    function displayName(firstName, lastName) {
+      var message = "Your first name is " + firstName + ", and your last name is " + lastName;
+      document.getElementById("result").innerHTML = message;
+    }
+
+    function displayFullName() {
+      var firstName = document.getElementById("firstName").value;
+      var lastName = document.getElementById("lastName").value;
+      displayName(firstName, lastName);
+    }
+	  //When the "Display" button is hit, the displayFullName JavaScript function is invoked. Using document, it obtains the first and last name input fields' values.document and value for the element with the ID "firstName"getElementById("lastName").value. It then uses the first name and last name that were received to run the displayName method.
+	  
+	  
+	  
+	 // In the buttom 
+	  //There are two label> components total. The first label is connected to an input> element and contains the text "First Name:". A connection between them is made possible by the for attribute of the label matching the id attribute of the input field. The input> tag is used to create the input field, with the attributes type="text" and id="firstName" respectively. This enables us to use JavaScript to refer to this input field.
+  </script>
+
+
+</head>
+<body>
+  <h1>Display Name</h1>
+
+  <label for="firstName">First Name:</label>
+  <input type="text" id="firstName"><br>
+
+  <label for="lastName">Last Name:</label>
+  <input type="text" id="lastName"><br>
+
+  <button onclick="displayFullName()">Display</button>
+
+  <p id="result"></p>
+	
+	
+</body>
+</html>

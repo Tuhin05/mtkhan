@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>List of Favorite Actors</title>
+  <script>
+    // JavaScript code
+    function displayFavoriteActors() {
+      var favoriteActors = [
+        "Robert Downey Jr.",
+        "Scarlett Johansson",
+        "Chris Evans",
+        "Mark Ruffalo",
+        "Chris Hemsworth",
+        "Tom Holland",
+        "Benedict Cumberbatch",
+        "Chadwick Boseman",
+        "Brie Larson",
+        "Tom Hiddleston"
+      ];
+
+      var favoriteActorsList = "";
+
+      // Loop to display the initial list of favorite actors
+      favoriteActorsList += "Initial list of favorite actors:<br>";
+      for (var i = 0; i < favoriteActors.length; i++) {
+        favoriteActorsList += favoriteActors[i] + "<br>";
+      }
+
+      // Add 2 more favorite actors to the array
+      favoriteActors.push("Ryan Reynolds", "Dwayne Johnson");
+
+      // Loop to display the updated list of favorite actors
+      favoriteActorsList += "<br>Updated list of favorite actors:<br>";
+      for (var i = 0; i < favoriteActors.length; i++) {
+        favoriteActorsList += favoriteActors[i] + "<br>";
+      }
+
+      // Display the list of favorite actors in the HTML page
+      document.getElementById("favoriteActorsOutput").innerHTML = favoriteActorsList;
+    }
+  </script>
+</head>
+<body>
+  <h1>List of Favorite Actors</h1>
+
+  <button onclick="displayFavoriteActors()">Display Favorite Actors</button>
+
+  <!-- Output element to display the list of favorite actors -->
+  <div id="favoriteActorsOutput"></div>
+</body>
+</html>
+

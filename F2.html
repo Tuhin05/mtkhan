@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Extract Words from Quote</title>
+  <script>
+    // JavaScript code
+    function extractWords() {
+      // Get the quote from the input field
+      var quote = document.getElementById("quoteInput").value;
+      
+      // Split the quote into an array of words using space as the delimiter
+      var words = quote.split(" ");
+      
+      // Extract the 4th and 6th words from the array
+      var fourthWord = words[3];
+      var sixthWord = words[5];
+      
+      // Display the extracted words in the output elements
+      document.getElementById("fourthWordOutput").textContent = "4th word: " + fourthWord;
+      document.getElementById("sixthWordOutput").textContent = "6th word: " + sixthWord;
+    }
+  </script>
+</head>
+<body>
+  <h1>Extract Words from Quote</h1>
+  
+  <!-- Input field for the quote -->
+  <label for="quoteInput">Enter the Quote:</label>
+  <input type="text" id="quoteInput"><br>
+  
+  <!-- Button to trigger the word extraction -->
+  <button onclick="extractWords()">Extract Words</button>
+  
+  <!-- Output elements to display the extracted words -->
+  <p id="fourthWordOutput"></p>
+  <p id="sixthWordOutput"></p>
+</body>
+</html>
+
